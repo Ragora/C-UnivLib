@@ -1,0 +1,9 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.1.0)
+
+PROJECT(UnivLibTests)
+
+# Set test sources, libraries and includes.
+FILE(GLOB TEST_SOURCES *.c)
+INCLUDE_DIRECTORIES ("${CMAKE_SOURCE_DIR}" "../include/all")
+ADD_EXECUTABLE (UnivLibTests ${TEST_SOURCES})
+TARGET_LINK_LIBRARIES(UnivLibTests UnivLib)
